@@ -10,7 +10,7 @@
         <%= link_to "back to restaurants list",  restaurants_path , class:"btn btn-primary btn-sm pull-left "%>
  <%-# if manger => will render restuarant and functionalities-%>
             <%if @role == "manger" && current_user.id == @restaurant.user_id%>
-                <%= link_to "add food", new_restaurant_food_path(@restaurant.id) %>
+                <%= link_to "add food", new_restaurant_food_path(@restaurant.id),class:"btn btn-primary btn-sm " %>
             <%end%>
     </div>
 
@@ -40,7 +40,7 @@
      data: {confirm: "Are you sure you want to delete " + f.name}, class:"btn btn-primary btn-sm pull-left " %>
 <%end%>
                                     <div class="price-wrap h5"> 
-                                            <span class="price-new"><%= f.price%></span>
+                                            
                                     </div>        
 
                              </div>  
